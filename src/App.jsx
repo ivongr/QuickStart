@@ -1,4 +1,3 @@
-import './App.css'
 
 import { useState } from "react";
 /*  useState */
@@ -7,7 +6,7 @@ export default function MyApp() {
     <div>
       <h1> Contadores que se actualiza separado</h1>
       <MyButton />
-      <MyButton />
+     
     </div>
   );
 }
