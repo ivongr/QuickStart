@@ -1,26 +1,27 @@
 
-import { useState } from "react";
-/*  useState */
+import { BrowserRouter as Router, Route, Link, Routes }
+  from "react-router-dom";
+
+import Profile from "./Profile.jsx"
+import './index.css'
+
 export default function MyApp() {
   return (
-    <div>
-      <h1> Contadores que se actualiza separado</h1>
-      <MyButton />
-     
-    </div>
-  );
-}
+    <>
+    <Router>
+      <Routes>
+        <Route exact path="/profile"
+          element={Profile} />
+        
 
-function MyButton() {
-  const [count, setCount] = useState(0);
+      </Routes>
+      <div className="list">
+        <ul>
+          <li> <Link to="/profile">Ejemplo 1</Link> </li>
 
-  function handleClick() {
-    setCount(count + 1);
-  }
-
-  return (
-    <button onClick={handleClick}>
-      Clicked {count} time
-    </button>
+        </ul>
+      </div>
+    </Router>
+    </>
   );
 }
