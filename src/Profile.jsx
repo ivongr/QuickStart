@@ -11,7 +11,7 @@ export default function Profile() {
       <img
         className="avatar"
         src={user.imageUrl}
-        alt={'Photo of ' + user.name}
+        alt={'Foto de' + user.name}
         style={{
           width: user.imageSize,
           height: user.imageSize

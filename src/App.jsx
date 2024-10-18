@@ -4,7 +4,7 @@ import List from './List.jsx';
 import CounterS from "./MyButton.jsx"
 import CounterTg from './CounterToge.jsx';
 import NavBar from './NavBar.jsx';
-
+import './App.css'
 export default function MyApp() {
   return (
     <Router>
