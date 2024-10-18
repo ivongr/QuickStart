@@ -1,27 +1,20 @@
-
-import { BrowserRouter as Router, Route, Link, Routes }
-  from "react-router-dom";
-
-import Profile from "./Profile.jsx"
-import './index.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Profile from './Profile.jsx';
+import List from './List.jsx';
+import CounterS from "./MyButton.jsx"
+import CounterTg from './CounterToge.jsx';
+import NavBar from './NavBar.jsx';
 
 export default function MyApp() {
   return (
-    <>
     <Router>
+      <NavBar />
       <Routes>
-        <Route exact path="/profile"
-          element={Profile} />
-        
-
+        <Route path="/" element={<Profile />} />
+        <Route path="/List" element={<List />} />
+        <Route path="/CounterS" element={<CounterS />} />
+        <Route path="/CounterTg" element={<CounterTg/>} />
       </Routes>
-      <div className="list">
-        <ul>
-          <li> <Link to="/profile">Ejemplo 1</Link> </li>
-
-        </ul>
-      </div>
     </Router>
-    </>
   );
 }
